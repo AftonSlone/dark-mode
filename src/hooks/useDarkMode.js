@@ -1,8 +1,8 @@
 import React from "react";
 import useLocalStorage from "./useLocalStorage";
 
-export default function useDarkMode() {
-  const [someValue, setSomeValue] = useLocalStorage(key);
+export function useDarkMode(input) {
+  const [dark, setDark] = useLocalStorage("dark", input);
 
-  return [value, setter];
+  return [dark, setDark];
 }
